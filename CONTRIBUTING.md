@@ -2,12 +2,28 @@
 
 If you want to contribute to a project and make it better, your help is very welcome. Please see below instructions how to contribute.
 
-## Table of Content
+<!-- TOC -->
 
-* [1. Initial Setup](#1-initial-setup)
-* [2. Recurrent synchronization](#2-recurrent-synchronization)
-* [3. Add new Content and Commit](#3-add-new-content-and-commit)
-* [4. Upload to main project repository](#4-upload-to-main-project-repository)
+- [How to Contribute](#how-to-contribute)
+  - [1. Initial Setup](#1-initial-setup)
+    - [1.1. Create GitHub user](#11-create-github-user)
+    - [1.2. Add SSH key](#12-add-ssh-key)
+    - [1.3. Fork the repository](#13-fork-the-repository)
+    - [1.4. Clone the forked repository](#14-clone-the-forked-repository)
+    - [1.5. Configure synchronization](#15-configure-synchronization)
+  - [2. Recurrent synchronization](#2-recurrent-synchronization)
+    - [2.1. Download new content from main project repository](#21-download-new-content-from-main-project-repository)
+    - [2.2. Upload merged content to your GitHub repository](#22-upload-merged-content-to-your-github-repository)
+  - [3. Add new Content and Commit](#3-add-new-content-and-commit)
+    - [3.1. Add or edit the documentation](#31-add-or-edit-the-documentation)
+    - [3.2. Commit the content to your local repository](#32-commit-the-content-to-your-local-repository)
+    - [3.3. Push changes to GitHub](#33-push-changes-to-github)
+  - [4. Upload to main project repository](#4-upload-to-main-project-repository)
+    - [4.1. Synchronize your content with main project](#41-synchronize-your-content-with-main-project)
+    - [4.2. Update CHANGELOG.md file](#42-update-changelogmd-file)
+    - [4.3. Create Pull Request](#43-create-pull-request)
+
+<!-- /TOC -->
 
 ## 1. Initial Setup
 
@@ -25,9 +41,9 @@ Detailed instructions are here: <https://help.github.com/en/articles/adding-a-ne
 
 ### 1.3. Fork the repository
 
-Forking the repository will create your own personal copy of the repository.
+Forking the `devel` repository will create your own personal copy of the repository.
 
-1. Navigate to the project repository: <https://github.com/sap-architecture/sap-hana>
+1. Navigate to the project repository: <https://github.com/sap-architecture-devel/sap-hana>
 
 2. Click on `Fork` button in upper-right corner of the page
 
@@ -87,7 +103,7 @@ Configure forked repository synchronization with main project repository.
     origin    git@github.com:<YOUR-USER>/sap-hana.git (push)
     ```
 
-3. Add link to main project repository: `git remote add upstream git@github.com:sap-architecture/sap-hana.git`
+3. Add link to main project repository: `git remote add upstream git@github.com:sap-architecture-devel/sap-hana.git`
 
 4. List again defined remote repositories:
 
@@ -95,8 +111,8 @@ Configure forked repository synchronization with main project repository.
     # git remote -v
     origin    git@github.com:<YOUR-USER>/sap-hana.git (fetch)
     origin    git@github.com:<YOUR-USER>/sap-hana.git (push)
-    upstream  git@github.com:sap-architecture/sap-hana.git (fetch)
-    upstream  git@github.com:sap-architecture/sap-hana.git (push)
+    upstream  git@github.com:sap-architecture-devel/sap-hana.git (fetch)
+    upstream  git@github.com:sap-architecture-devel/sap-hana.git (push)
     ```
 
 Detailed instructions are here: <https://help.github.com/en/articles/fork-a-repo>
@@ -111,7 +127,7 @@ Download and merge new updates from main project repository into your local repo
 
 1. Open Terminal and change directory to location of your local copy of the repository: `cd /path-to-your-repository/sap-hana`
 
-2. Fetch the branchges and their content from the main project repository:
+2. Fetch the branches and their content from the main project repository:
 
     ```bash
     # git fetch upstream
@@ -120,7 +136,7 @@ Download and merge new updates from main project repository into your local repo
     remote: Compressing objects: 100% (10/10), done.
     remote: Total 11 (delta 0), reused 10 (delta 0), pack-reused 0
     Unpacking objects: 100% (11/11), done.
-    From github.com:sap-architecture/sap-hana
+    From github.com:sap-architecture-devel/sap-hana
     * [new branch]      master     -> upstream/master
     ```
 
@@ -187,10 +203,10 @@ The documentation is written in Markdown language.
 
 Additional information about Markdown:
 
-* [Basic writing and formatting syntax](https://help.github.com/en/articles/basic-writing-and-formatting-syntax)
-* [Working with advanced formatting](https://help.github.com/en/articles/working-with-advanced-formatting)
-* [Mastering Markdown](https://guides.github.com/features/mastering-markdown)
-* [GitHub Flavored Markdown Spec](https://github.github.com/gfm)
+- [Basic writing and formatting syntax](https://help.github.com/en/articles/basic-writing-and-formatting-syntax)
+- [Working with advanced formatting](https://help.github.com/en/articles/working-with-advanced-formatting)
+- [Mastering Markdown](https://guides.github.com/features/mastering-markdown)
+- [GitHub Flavored Markdown Spec](https://github.github.com/gfm)
 
 Images should be uploaded into subdirectory `images` below directory where the page referencing the image is located.
 
@@ -200,14 +216,15 @@ Make sure you name all images and files in clear way.
 
 All links to pages, images or files located in this repository should be based on relative paths - avoid using absolute paths as this will break the link functionality in forked repositories.
 
-Use your favorite editor to add new content. Use Linting function to deliver clean and well structured documentation.
+Use your favorite editor to add new content. Use Linting function to deliver clean and well-structured documentation.
 
 Recommended editors:
 
-* [Visual Studio Code](https://code.visualstudio.com)
-  * plugin [Markdown All in One](https://github.com/yzhang-gh/vscode-markdown)
-  * plugin [Markdown Lint](https://github.com/DavidAnson/vscode-markdownlint)
-* [Atom Editor](https://atom.io)
+- [Visual Studio Code](https://code.visualstudio.com)
+  - plugin [Markdown All in One](https://github.com/yzhang-gh/vscode-markdown)
+  - plugin [Markdown Lint](https://github.com/DavidAnson/vscode-markdownlint)
+  - plugin [Auto Markdown TOC](https://github.com/huntertran/markdown-toc)
+- [Atom Editor](https://atom.io)
 
 ### 3.2. Commit the content to your local repository
 
@@ -237,10 +254,10 @@ Use either your editor to commit the changes (recommended) or perform following 
 
 3. Add files that should be included in commit
 
-    * Add individual files: `git add <file_name>`
-    * Add directory: `git add <directory_name>`
+    - Add individual files: `git add <file_name>`
+    - Add directory: `git add <directory_name>`
 
-    In ordee to add all files perform `git add .`
+    In order to add all files, perform `git add .`
 
 4. Check the status again
 
@@ -310,12 +327,12 @@ Follow procedure described in section [3. Add new Content and Commit](#3-add-new
 
 Before you create Pull Request (PR) make sure that:
 
-* you downloaded and merged latest content from main project repository
-* you resolved all merge conflicts
-* you pushed all changes from your local repository on your workstation to online GitHub repository
-* you reviewed your content online in GitHub `https://github.com/<YOUR-USER>/sap-hana` and confirmed the content is rendering correctly - that includes:
-  * all images are properly displayed (and are relative)
-  * all links are working properly (and are relative is pointing to page in same repository)
+- you downloaded and merged latest content from main project repository
+- you resolved all merge conflicts
+- you pushed all changes from your local repository on your workstation to online GitHub repository
+- you reviewed your content online in GitHub `https://github.com/<YOUR-USER>/sap-hana` and confirmed the content is rendering correctly - that includes:
+  - all images are properly displayed (and are relative)
+  - all links are working properly (and are relative is pointing to page in same repository)
 
 1. Navigate to the forked repository: `https://github.com/<YOUR-USER>/sap-hana`
 
@@ -341,6 +358,6 @@ Before you create Pull Request (PR) make sure that:
 
     Note: Until your Pull Request is accepted all your commits that are pushed to your forked repository in GitHub will be automatically included in given Pull Request.
 
-    If you want to make commits that are not included in Pull Request consider using separate branch for your updates.
+    If you want to make commits that are not included in Pull Request, consider using separate branch for your updates.
 
 Detailed instructions are here: <https://help.github.com/en/articles/creating-a-pull-request-from-a-fork>

@@ -1,0 +1,15 @@
+../README.md
+../CHANGELOG.md
+../CONTRIBUTING.md
+../pages/requirements.md
+../pages/architectural_decisions.md
+../pages/generic_architecture/overall_architecture.md
+../pages/generic_architecture/module_basic_architecture.md
+../pages/generic_architecture/module_virtual_hostname.md
+../pages/generic_architecture/module_high_availability.md
+../pages/generic_architecture/module_disaster_recovery.md
+../pages/generic_architecture/module_data_tiering.md
+../pages/generic_architecture/module_xsa.md
+../pages/generic_architecture/alternative_implementations.md
+../pages/platform_specific_architecture/cloud_iaas_aws.md
+../pages/platform_specific_architecture/cloud_iaas_azure.md
